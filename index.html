@@ -12,23 +12,28 @@
       color: #fff;
     }
     header {
-      background-image: url('diirtyddd-banner.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
       text-align: center;
+      padding: 2em;
+    }
+    header img {
+      width: 100%;
+      max-width: 1000px;
+    }
+    .logo {
+      width: 200px;
+      margin-top: 1em;
+    }
+    nav ul {
+      list-style: none;
       display: flex;
-      flex-direction: column;
       justify-content: center;
-      padding: 0 2em;
+      gap: 20px;
+      padding: 0;
     }
-    header h1 {
-      font-size: 4em;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.5em;
-      margin: 0.5em 0;
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
     }
     .buttons a {
       margin: 0.5em;
@@ -60,7 +65,8 @@
 <body>
 
   <header>
-    <h1>Diirty DDD</h1>
+    <img src="images/diirtyddd-banner.png" alt="DiirtyDDD Banner">
+    <img src="images/diirtyddd-logo.png" alt="DiirtyDDD Logo" class="logo">
     <p>LOCK. LOAD. DOMINATE. WELCOME TO DIIRTYDDD'S BATTLEFIELD</p>
     <div class="buttons">
       <a href="https://twitch.tv/DiirtyDDD" class="twitch">WATCH ON TWITCH</a>
@@ -69,6 +75,15 @@
       <a href="https://discord.gg/yourserver" class="discord">JOIN THE DISCORD</a>
     </div>
   </header>
+
+  <nav>
+    <ul>
+      <li><a href="https://twitch.tv/DiirtyDDD">Twitch</a></li>
+      <li><a href="https://kick.com/DiirtyDDD">Kick</a></li>
+      <li><a href="https://youtube.com/@DiirtyDDD">YouTube</a></li>
+      <li><a href="https://discord.gg/YOUR_INVITE">Discord</a></li>
+    </ul>
+  </nav>
 
   <section>
     <h2>About Me</h2>
@@ -82,18 +97,3 @@
 
 </body>
 </html>
-<header>
-  <img src="images/diirtyddd-banner.png" alt="DiirtyDDD Banner" style="width:100%;">
-  <img src="images/diirtyddd-logo.png" alt="DiirtyDDD Logo" style="width:200px;">
-</header>
-<nav>
-  <ul style="list-style:none; display:flex; gap:20px;">
-    <li><a href="https://twitch.tv/DiirtyDDD">Twitch</a></li>
-    <li><a href="https://kick.com/DiirtyDDD">Kick</a></li>
-    <li><a href="https://youtube.com/@DiirtyDDD">YouTube</a></li>
-    <li><a href="https://discord.gg/YOUR_INVITE">Discord</a></li>
-  </ul>
-</nav>
-git add .
-git commit -m "Added branding and schedule"
-git push

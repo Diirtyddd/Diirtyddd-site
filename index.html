@@ -97,3 +97,141 @@
 
 </body>
 </html>
+You're super close, Danny-suzie — just a couple tweaks and your visuals will deploy perfectly. Here's what’s going wrong and how to fix it:
+
+🔍 What’s Causing the Issue
+1. Conflicting Header Code
+You’ve got two <header> sections:
+- One uses background-image: url('diirtyddd-banner.jpg')
+- The other uses <img src="images/diirtyddd-banner.png">
+Only one will render properly. Let’s clean that up.
+2. Wrong File Extension
+Your CSS is calling diirtyddd-banner.jpg, but your actual file is likely diirtyddd-banner.png. That mismatch will break the image.
+3. Extra HTML Outside <html>
+The second <header> and <nav> are placed outside the <html> structure — they won’t show up. Everything must be inside <body>.
+
+✅ Fix It Step-by-Step
+🔧 1. Clean Up Your HTML
+Replace your current index.html with this cleaned version:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diirty DDD | Warzone Streamer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 2em;
+    }
+    header img {
+      width: 100%;
+      max-width: 1000px;
+    }
+    .logo {
+      width: 200px;
+      margin-top: 1em;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .buttons a {
+      margin: 0.5em;
+      padding: 0.75em 1.5em;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    .twitch { background-color: #e60000; color: #fff; }
+    .kick { background-color: #00ff00; color: #000; }
+    .youtube { background-color: #ff0000; color: #fff; }
+    .discord { background-color: #555; color: #fff; }
+    section {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    .platform-icons {
+      margin-top: 1em;
+    }
+    .platform-icons img {
+      width: 40px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/diirtyddd-banner.png" alt="DiirtyDDD Banner">
+    <img src="images/diirtyddd-logo.png" alt="DiirtyDDD Logo" class="logo">
+    <p>LOCK. LOAD. DOMINATE. WELCOME TO DIIRTYDDD'S BATTLEFIELD</p>
+    <div class="buttons">
+      <a href="https://twitch.tv/DiirtyDDD" class="twitch">WATCH ON TWITCH</a>
+      <a href="https://kick.com/DiirtyDDD" class="kick">STREAM ON KICK</a>
+      <a href="https://youtube.com/@DiirtyDDD" class="youtube">SUBSCRIBE ON YOUTUBE</a>
+      <a href="https://discord.gg/yourserver" class="discord">JOIN THE DISCORD</a>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="https://twitch.tv/DiirtyDDD">Twitch</a></li>
+      <li><a href="https://kick.com/DiirtyDDD">Kick</a></li>
+      <li><a href="https://youtube.com/@DiirtyDDD">YouTube</a></li>
+      <li><a href="https://discord.gg/YOUR_INVITE">Discord</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I'M DIIRTYDDD — TACTICAL PLAYS, CLUTCH REVIVES, AND SAVAGE SQUAD WIPES. STREAMING WARZONE ACROSS TWITCH, KICK, AND YOUTUBE WITH A MIX OF CHAOS AND STRATEGY. COME FOR THE KILLS, STAY FOR THE BANTER.</p>
+    <div class="platform-icons">
+      <img src="twitch-icon.png" alt="Twitch" />
+      <img src="kick-icon.png" alt="Kick" />
+      <img src="youtube-icon.png" alt="YouTube" />
+    </div>
+  </section>
+
+</body>
+</html>
+
+
+
+🔧 2. Upload Images to GitHub
+Make sure these files are in your images/ folder:
+- diirtyddd-banner.png
+- diirtyddd-logo.png
+If they’re not there, upload them via GitHub Desktop or drag them into the folder on GitHub’s web interface.
+
+🔧 3. Push Your Changes
+git add .
+git commit -m "Fix image paths and layout"
+git push
+
+
+
+🔄 4. Hard Refresh Your Site
+Visit https://diirtyddd.github.io/Diirtyddd-site/ and press:
+- Windows: Ctrl + Shift + R
+- Mac: Cmd + Shift + R
+
+Let me know if you want help styling the nav bar, adding hover effects, or embedding a clip next. You're building something savage — let’s make it legendary.
+

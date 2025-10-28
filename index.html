@@ -98,20 +98,7 @@
 </body>
 </html>
 
-🔍 What’s Causing the Issue
-1. Conflicting Header Code
-You’ve got two <header> sections:
-- One uses background-image: url('diirtyddd-banner.jpg')
-- The other uses <img src="images/diirtyddd-banner.png">
-Only one will render properly. Let’s clean that up.
-2. Wrong File Extension
-Your CSS is calling diirtyddd-banner.jpg, but your actual file is likely diirtyddd-banner.png. That mismatch will break the image.
-3. Extra HTML Outside <html>
-The second <header> and <nav> are placed outside the <html> structure — they won’t show up. Everything must be inside <body>.
 
-✅ Fix It Step-by-Step
-🔧 1. Clean Up Your HTML
-Replace your current index.html with this cleaned version:
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -214,28 +201,6 @@ Replace your current index.html with this cleaned version:
 
 
 
-🔧 2. Upload Images to GitHub
-Make sure these files are in your images/ folder:
-- diirtyddd-banner.png
-- diirtyddd-logo.png
-If they’re not there, upload them via GitHub Desktop or drag them into the folder on GitHub’s web interface.
-
-🔧 3. Push Your Changes
-git add .
-git commit -m "Fix image paths and layout"
-git push
-
-
-
-🔄 4. Hard Refresh Your Site
-Visit https://diirtyddd.github.io/Diirtyddd-site/ and press:
-- Windows: Ctrl + Shift + R
-- Mac: Cmd + Shift + R
-
-Let me know if you want help styling the nav bar, adding hover effects, or embedding a clip next. You're building something savage — let’s make it legendary.
-git add .
-git commit -m "Fix image paths and folder structure"
-git push
-
 <img src="diirtyddd-banner.png" alt="DiirtyDDD Banner">
 <img src="diirtyddd-logo.png" alt="DiirtyDDD Logo" class="logo">
+
